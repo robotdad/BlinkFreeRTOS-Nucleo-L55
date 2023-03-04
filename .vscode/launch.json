@@ -22,7 +22,7 @@
       "logging": {
         "engineLogging": true
       },
-      "preLaunchTask": "Build",
+      //"preLaunchTask": "Build",
       "svdPath": "${command:vscode-embedded.st.svd}/STM32L552.svd"
     }
   ]
