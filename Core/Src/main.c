@@ -583,7 +583,8 @@ void StartBlinkRed(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+    osDelay(1000);
   }
   /* USER CODE END 5 */
 }
@@ -601,7 +602,8 @@ void StartBlinkGreen(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin);
+    osDelay(1000);
   }
   /* USER CODE END StartBlinkGreen */
 }
@@ -619,7 +621,8 @@ void StartBlinkBlue(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    HAL_GPIO_TogglePin(LED_BLUE_GPIO_Port, LED_BLUE_Pin);
+    osDelay(1000);
   }
   /* USER CODE END StartBlinkBlue */
 }
