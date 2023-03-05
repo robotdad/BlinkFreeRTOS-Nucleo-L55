@@ -84,9 +84,15 @@ Place a breakpoint in any of the StartBlink functions created above.
 
 Connect your board and select the play button to start debugging, or press F5.
 
+### Examine peripheral registers
 When you hit a break point open the peripheral view from the command palette, select Focus on peripheral view. Expand the view that opens in the debug pane. Find the GPIO section corresponding to your breakpoint. The pins are under the ODR section. You can step over the HAL_GPIO_TogglePin call and either watch the value for ODR change, or expand it to see the specific pin value update.
 
 GPIOs for LEDs:
 * Red: GPIOA ODR9
 * Green: GPIOC ODR7
 * Blue: GPIOB ODR7
+
+### Inspect the RTOS threads
+When you hit a break point, or while the debugger is paused, open the RTOS view from the command palette, select Focus on RTOS view. 
+
+This view will show you the RTOS threads in your application, what state they are in, the size, and other details. This varies somewhat depending on what the RTOS makes available. The view is automatically set to the detected RTOS for threadx, FreeRTOS, and Zephyr.
